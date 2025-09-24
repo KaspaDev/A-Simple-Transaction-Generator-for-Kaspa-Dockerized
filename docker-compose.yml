@@ -1,0 +1,57 @@
+---
+services:
+  kaspa-tx-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kaspa-tx-generator
+    environment:
+      # Network configuration
+      - KASPA_NETWORK=${KASPA_NETWORK:-mainnet}
+      - KASPA_GRPC_URL=${KASPA_GRPC_URL:-grpc://n-mainnet.kaspa.ws:16110}
+
+      # Private key (REQUIRED - set in .env file)
+      - PRIVATE_KEY_HEX=${PRIVATE_KEY_HEX}
+
+      # Transaction parameters
+      - TARGET_UTXO_COUNT=${TARGET_UTXO_COUNT:-100}
+      - AMOUNT_PER_UTXO=${AMOUNT_PER_UTXO:-150000000}
+      - OUTPUTS_PER_TRANSACTION=${OUTPUTS_PER_TRANSACTION:-10}
+      - SPAM_DURATION_SECONDS=${SPAM_DURATION_SECONDS:-86400}
+
+      # Performance tuning
+      - TARGET_TPS=${TARGET_TPS:-50}
+      - UNLEASHED=${UNLEASHED:-true}
+      - MILLIS_PER_TICK=${MILLIS_PER_TICK:-10}
+      - BASE_FEE_RATE=${BASE_FEE_RATE:-1}
+      - CLIENT_POOL_SIZE=${CLIENT_POOL_SIZE:-8}
+      - UTXO_REFRESH_SECS=${UTXO_REFRESH_SECS:-1}
+      - MIN_CHANGE_SOMPI=${MIN_CHANGE_SOMPI:-1000000}
+      - MAX_PENDING_AGE_SECS=${MAX_PENDING_AGE_SECS:-3600}
+
+      # Logging
+      - RUST_LOG=${RUST_LOG:-info}
+    command: >
+      kaspa-tx-generator
+      --net ${KASPA_NETWORK:-mainnet}
+    restart: unless-stopped
+    networks:
+      - kaspa-network
+
+  kaspa-wallet-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kaspa-wallet-generator
+    environment:
+      # Logging
+      - RUST_LOG=${RUST_LOG:-info}
+    command: kaspa-tx-generator --gen-wallets
+    volumes:
+      - ./wallets:/home/kaspa/wallets
+    networks:
+      - kaspa-network
+
+networks:
+  kaspa-network:
+    driver: bridge

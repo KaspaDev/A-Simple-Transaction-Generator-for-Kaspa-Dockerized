@@ -1,0 +1,12 @@
+/Volumes/tuf8tb/KASPADEV/A-Simple-Transaction-Generator-for-Kaspa-Dockerized/target/debug/deps/libserde-bcc93b57a3444acd.rmeta: /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/lib.rs /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/integer128.rs /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/mod.rs /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/de.rs /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/ser.rs /Volumes/tuf8tb/KASPADEV/A-Simple-Transaction-Generator-for-Kaspa-Dockerized/target/debug/build/serde-e27d8242d44b69f3/out/private.rs
+
+/Volumes/tuf8tb/KASPADEV/A-Simple-Transaction-Generator-for-Kaspa-Dockerized/target/debug/deps/serde-bcc93b57a3444acd.d: /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/lib.rs /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/integer128.rs /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/mod.rs /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/de.rs /Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/ser.rs /Volumes/tuf8tb/KASPADEV/A-Simple-Transaction-Generator-for-Kaspa-Dockerized/target/debug/build/serde-e27d8242d44b69f3/out/private.rs
+
+/Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/lib.rs:
+/Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/integer128.rs:
+/Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/mod.rs:
+/Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/de.rs:
+/Users/josh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/ser.rs:
+/Volumes/tuf8tb/KASPADEV/A-Simple-Transaction-Generator-for-Kaspa-Dockerized/target/debug/build/serde-e27d8242d44b69f3/out/private.rs:
+
+# env-dep:OUT_DIR=/Volumes/tuf8tb/KASPADEV/A-Simple-Transaction-Generator-for-Kaspa-Dockerized/target/debug/build/serde-e27d8242d44b69f3/out
