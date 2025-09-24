@@ -115,17 +115,27 @@ fn generate_wallets(n: usize) -> Vec<Wallet> {
         // Generate deterministic private key based on index for testing
         // In production, use proper cryptographic random number generation
         let mut private_key = [0u8; 32];
+        
+        // Create a more varied private key based on index
         for j in 0..32 {
-            private_key[j] = ((i * 256 + j) % 256) as u8;
+            private_key[j] = ((i * 256 + j + (i * i * 7)) % 256) as u8;
         }
         
-        // Add some variation to make each wallet unique
+        // Add more variation to make each wallet unique
         private_key[0] = (i % 256) as u8;
+        private_key[1] = ((i * 3) % 256) as u8;
+        private_key[30] = ((i * 5) % 256) as u8;
         private_key[31] = ((i * 7) % 256) as u8;
         
-        // For simplicity, we'll use the private key as the public key
-        // In a real implementation, you'd derive the public key from the private key
-        let public_key = private_key; // This is simplified
+        // Generate a different public key based on the private key
+        // This is a simplified approach - in production, use proper ECDSA
+        let mut public_key = [0u8; 33]; // Compressed public key format
+        public_key[0] = 0x02; // Compressed key prefix
+        
+        // Generate public key bytes based on private key
+        for j in 0..32 {
+            public_key[j + 1] = private_key[j] ^ ((i * 11 + j * 13) % 256) as u8;
+        }
         
         let private_key_hex = hex::encode(&private_key);
         let public_key_hex = hex::encode(&public_key);
