@@ -1,25 +1,60 @@
 Wallet 1
+ID: 1
 Private Key (hex): 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e00
 Public Key (hex): 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e00
 Kaspa Address: kaspa:eancx6c8n3lcngf7hd7ljm7z29tylrcugex50r
 ------------------------------------------------------------
 Wallet 2
+ID: 2
 Private Key (hex): 010102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e07
 Public Key (hex): 010102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e07
 Kaspa Address: kaspa:6w0dj8w3knrftgcjhlhlzcxatjjxe3xayht49l
 ------------------------------------------------------------
 Wallet 3
+ID: 3
 Private Key (hex): 020102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e0e
 Public Key (hex): 020102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e0e
 Kaspa Address: kaspa:z6zmprf93ecrnx7kt04kmz0zv6vyufpcekpyae
 ------------------------------------------------------------
 Wallet 4
+ID: 4
 Private Key (hex): 030102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e15
 Public Key (hex): 030102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e15
 Kaspa Address: kaspa:sz4q5wsfj48sgt7ppyfdm9kmlx0826yh28lu89
 ------------------------------------------------------------
 Wallet 5
+ID: 5
 Private Key (hex): 040102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1c
 Public Key (hex): 040102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1c
 Kaspa Address: kaspa:tmq2u3a26s2w5vtks7w9azu6rkwl3gt6jt7fjl
+------------------------------------------------------------
+Wallet 6
+ID: 6
+Private Key (hex): 050102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e23
+Public Key (hex): 050102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e23
+Kaspa Address: kaspa:ncz7ttgdf23sgp9ad7ftlv6px5837djzaag0gg
+------------------------------------------------------------
+Wallet 7
+ID: 7
+Private Key (hex): 060102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e2a
+Public Key (hex): 060102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e2a
+Kaspa Address: kaspa:z38xc0mclupsc7cajlkmlwyrn694fhm73yfwz5
+------------------------------------------------------------
+Wallet 8
+ID: 8
+Private Key (hex): 070102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e31
+Public Key (hex): 070102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e31
+Kaspa Address: kaspa:q84kcjla04c44du8l7fyha5m8w074jzrkjtz33
+------------------------------------------------------------
+Wallet 9
+ID: 9
+Private Key (hex): 080102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e38
+Public Key (hex): 080102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e38
+Kaspa Address: kaspa:4l9hrtrzfcsm5u2wva6p3j226knm97c7hms8q4
+------------------------------------------------------------
+Wallet 10
+ID: 10
+Private Key (hex): 090102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e3f
+Public Key (hex): 090102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e3f
+Kaspa Address: kaspa:gwjgtd547rh5sd4mfy2amyn862x96hg9qrc234
 ------------------------------------------------------------

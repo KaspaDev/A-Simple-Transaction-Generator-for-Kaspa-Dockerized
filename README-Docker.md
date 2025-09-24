@@ -140,17 +140,113 @@ cargo run -- --gen-wallets --format=txt --count=50 --output=production_wallets
 # Then select option 1
 ```
 
-### Wallet Output
+## 🔧 Binary Usage Reference
 
-Generated wallets are saved to `wallets.txt` with the following format:
+The wallet generator is a powerful command-line tool with extensive options for different use cases.
+
+### Command Line Options
+
+| Option               | Short           | Description                         | Default |
+| -------------------- | --------------- | ----------------------------------- | ------- |
+| `--generate-wallets` | `--gen-wallets` | Generate wallets                    | -       |
+| `--count N`          | `-c N`          | Number of wallets to generate       | 10      |
+| `--format FORMAT`    | `-f FORMAT`     | Output format (txt, csv)            | txt     |
+| `--output NAME`      | `-o NAME`       | Output filename (without extension) | wallets |
+| `--help`             | `-h`            | Show help information               | -       |
+
+### Output Formats
+
+**TXT Format (Default):**
+
+- Human-readable text with separators
+- Perfect for manual inspection and copying keys
+- Each wallet clearly separated with visual dividers
+
+**CSV Format:**
+
+- Comma-separated values with headers
+- Ideal for spreadsheet applications and data processing
+- Headers: ID, Private Key, Public Key, Address
+
+### Usage Examples
+
+**Basic Generation:**
+
+```bash
+# Generate 10 wallets in TXT format
+cargo run -- --gen-wallets
+
+# Generate 5 wallets in CSV format
+cargo run -- --gen-wallets --count 5 --format csv
+```
+
+**Advanced Usage:**
+
+```bash
+# Generate 100 wallets for production use
+cargo run -- --gen-wallets --count 100 --format csv --output production_wallets
+
+# Generate wallets with custom naming
+cargo run -- --gen-wallets -c 50 -f txt -o test_wallets
+
+# Using equals syntax
+cargo run -- --gen-wallets --count=25 --format=csv --output=my_wallets
+```
+
+**Docker Usage:**
+
+```bash
+# Generate wallets in Docker container
+docker-compose run --rm kaspa-wallet-generator -- --gen-wallets --count 20 --format csv
+
+# Generate with custom output
+docker-compose run --rm kaspa-wallet-generator -- --gen-wallets -c 100 -f csv -o docker_wallets
+```
+
+### Output Files
+
+Generated files will be created in the current directory:
+
+- `wallets.txt` - Default TXT output
+- `wallets.csv` - Default CSV output
+- `custom_name.txt` - Custom filename with TXT format
+- `custom_name.csv` - Custom filename with CSV format
+
+### Integration with Transaction Generator
+
+After generating wallets, use any private key in your `.env` file:
+
+```bash
+# 1. Generate wallets
+cargo run -- --gen-wallets --count 10 --format csv
+
+# 2. Copy a private key from the generated file
+# 3. Edit .env file and set:
+PRIVATE_KEY_HEX=your_private_key_here
+
+# 4. Run transaction generator
+docker-compose up --build
+```
+
+### Sample Output
+
+**TXT Format:**
 
 ```
 Wallet 1
-Mnemonic: abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about
-Private Key (hex): 0123456789abcdef...
-Public Key (compressed hex): 02abcdef...
-Kaspa Address: kaspa:qpx...
+ID: 1
+Private Key (hex): 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e00
+Public Key (hex): 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e00
+Kaspa Address: kaspa:eancx6c8n3lcngf7hd7ljm7z29tylrcugex50r
 ------------------------------------------------------------
+```
+
+**CSV Format:**
+
+```csv
+ID,Private Key,Public Key,Address
+1,000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e00,000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e00,kaspa:eancx6c8n3lcngf7hd7ljm7z29tylrcugex50r
+2,010102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e07,010102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e07,kaspa:6w0dj8w3knrftgcjhlhlzcxatjjxe3xayht49l
 ```
 
 ## 🔧 Getting a Private Key
