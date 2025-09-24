@@ -111,18 +111,25 @@ The application now includes a built-in Kaspa wallet generator that can create s
 **Simple Usage (Recommended):**
 
 ```bash
-# Generate 10 wallets with one command
+# Generate 10 wallets in TXT format (default)
 docker-compose run --rm kaspa-wallet-generator
+
+# Or run locally
+cargo run -- --gen-wallets
 ```
 
 **Custom Options:**
 
 ```bash
-# Generate 5 wallets
-docker-compose run --rm kaspa-wallet-generator -- --gen-wallets --count 5
+# Generate 5 wallets in CSV format
+docker-compose run --rm kaspa-wallet-generator -- --gen-wallets --count 5 --format csv
 
-# Generate 20 wallets
-docker-compose run --rm kaspa-wallet-generator -- --gen-wallets -c 20
+# Generate 20 wallets with custom filename
+docker-compose run --rm kaspa-wallet-generator -- --gen-wallets -c 20 -f csv -o my_wallets
+
+# Local execution examples
+cargo run -- --gen-wallets --count 100 --format csv
+cargo run -- --gen-wallets --format=txt --count=50 --output=production_wallets
 ```
 
 **Interactive Setup:**
