@@ -2,17 +2,11 @@ Wallet 1
 ID: 1
 Private Key (hex): 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e00
 Public Key (hex): 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e00
-Kaspa Address: kaspa:eancx6c8n3lcngf7hd7ljm7z29tylrcugex50r
+Kaspa Address: kaspa:qzm3kn69cm58r3zzqt9zjcl5kgwa3j9mwm6wusrlukvf388n097072sj7x08s
 ------------------------------------------------------------
 Wallet 2
 ID: 2
 Private Key (hex): 010102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e07
 Public Key (hex): 010102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e07
-Kaspa Address: kaspa:6w0dj8w3knrftgcjhlhlzcxatjjxe3xayht49l
-------------------------------------------------------------
-Wallet 3
-ID: 3
-Private Key (hex): 020102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e0e
-Public Key (hex): 020102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e0e
-Kaspa Address: kaspa:z6zmprf93ecrnx7kt04kmz0zv6vyufpcekpyae
+Kaspa Address: kaspa:qzm3kn69cm58r3zzqt9zjcl5kgwa3j9mwm6wusrlukvf388n097072sj7x08s
 ------------------------------------------------------------
